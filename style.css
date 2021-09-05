@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url('./img/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    min-width: 400px;
+    border-radius: 12px;
+}
+
+input {
+    display: block;
+
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    background: none;
+    border-bottom: 3px solid #fff;
+    font-size: 24px;
+    outline: none;
+    color: #fff;
+    max-width: 300px;
+    margin: 15px auto;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+input[type='submit'] {
+    background-color: teal;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+input[type='submit']:hover {
+    background-color:mediumturquoise;
+}
+
+.error {
+    border-bottom: 3px solid red;
+    color: red;
+}
+
+.bg-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.8);
+    z-index: 99;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    min-width: 300px;
+    min-height: 300px;
+    font-family: 'segoe ui', sans-serif;
+    padding: 20px;
+}
+
+.modal p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.modal button {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background-color: moccasin;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+}
+
+.modal button:hover {
+    background-color:khaki;
+
+}
+
+.modal button:active {
+    background-color:khaki;
+    box-shadow: none;
+}
+
