@@ -25,15 +25,18 @@ function createModal (textP) {
 }
 
 function formSubmit () {
+    for (let i= 0; i < 4; i++) {
+        if (inputs[i].value.length === 0) {
+            createModal('Есть пустое поле пустое');
+            inputs[i].classList.add(`error`);
+            return false;
+        }
+    }
     if (!/^[a-zA-Zа-яА-Я ]*$/.test(inputs[0].value)) {
         createModal('В имени должны быть только буквы');
         inputs[0].classList.add(`error`);
         return false;
-    } else if (inputs[0].value.length === 0) {
-        createModal('Поле пустое');
-        inputs[0].classList.add(`error`);
-        return false;
-    }
+    } 
     if (inputs[1].value !== inputs[2].value) {
         createModal(`Пароли должны совпадать`);
         inputs[1].classList.add(`error`);
@@ -52,11 +55,7 @@ function formSubmit () {
         createModal('Неправильный ввод email');
         inputs[3].classList.add(`error`);
         return false;
-    } else if (inputs[3].value.length === 0) {
-        createModal('Поле пустое');
-        inputs[3].classList.add(`error`);
-        return false;
-    }
+    } 
     return true;
 }
 
